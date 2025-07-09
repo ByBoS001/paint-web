@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+.container {
+  display: flex;
+}
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  background-color: #fff;
+  border-right: 2px solid #ccc;
+}
+.tool, #clear, #save {
+  padding: 10px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.tool:hover, #clear:hover, #save:hover {
+  background-color: #ddd;
+  transform: scale(1.05);
+}
+.tool.active {
+  background-color: #ccc;
+}
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+canvas {
+  border: 2px solid #000;
+  background-color: #fff;
+  margin: 10px;
+  cursor: crosshair;
+}
